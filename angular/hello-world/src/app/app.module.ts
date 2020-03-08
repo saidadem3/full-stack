@@ -9,16 +9,25 @@ import { CourseComponent } from "./course/course.component";
 import { CourseService } from "./courses.service";
 import { AuthorsComponent } from "./authors/authors.component";
 import { AuthorsService } from "./authors.service";
+import { FavoriteComponent } from "./favorite/favorite.component";
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faFilm, faFire } from "@fortawesome/free-solid-svg-icons";
 
 @NgModule({
   declarations: [
     AppComponent,
     CoursesComponenet,
     CourseComponent,
-    AuthorsComponent
+    AuthorsComponent,
+    FavoriteComponent
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule, FontAwesomeModule],
   providers: [CourseService, AuthorsService],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+  constructor() {
+    library.add(faFilm, faFire);
+  }
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 import { faFilm, faFire } from "@fortawesome/free-solid-svg-icons";
 
 @Component({
@@ -7,9 +7,15 @@ import { faFilm, faFire } from "@fortawesome/free-solid-svg-icons";
   styleUrls: ["./favorite.component.css"]
 })
 export class FavoriteComponent implements OnInit {
-  filmIcon = faFilm;
-  fire = faFire;
+  @Input("is-fave") isFavorite: boolean;
+  @Output() change = new EventEmitter();
+
   constructor() {}
 
   ngOnInit() {}
+
+  onClick() {
+    this.isFavorite = !this.isFavorite;
+    this.change.emit();
+  }
 }

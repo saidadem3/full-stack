@@ -1,1 +1,6 @@
-<fa-icon [icon]="fire" size="3x"></fa-icon>
+<span
+  class="glyphicon"
+  [class.glyphicon-star]="isFavorite"
+  [class.glyphicon-star-empty]="!isFavorite"
+  (click)="onClick()"
+></span>

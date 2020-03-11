@@ -14,6 +14,7 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faFilm, faFire } from "@fortawesome/free-solid-svg-icons";
 import { PanelComponent } from './panel/panel.component';
+import { LikeComponent } from './like/like.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PanelComponent } from './panel/panel.component';
     CourseComponent,
     AuthorsComponent,
     FavoriteComponent,
-    PanelComponent
+    PanelComponent,
+    LikeComponent
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, FontAwesomeModule],
   providers: [CourseService, AuthorsService],

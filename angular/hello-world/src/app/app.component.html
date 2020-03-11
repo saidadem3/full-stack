@@ -1,1 +1,12 @@
-<favorite [is-fave]="post.isFavorite" (change)="onFavoriteChanged()"></favorite>
+<bootstrap-panel>
+  <ng-container class="heading">Heading</ng-container>
+  <div class="body">
+    <h2>Hello</h2>
+    <p>World</p>
+  </div>
+</bootstrap-panel>
+
+<favorite
+  [is-fave]="post.isFavorite"
+  (change)="onFavoriteChanged($event)"
+></favorite>

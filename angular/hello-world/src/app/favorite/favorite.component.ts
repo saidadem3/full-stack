@@ -8,7 +8,7 @@ import { faFilm, faFire } from "@fortawesome/free-solid-svg-icons";
 })
 export class FavoriteComponent implements OnInit {
   @Input("is-fave") isFavorite: boolean;
-  @Output() change = new EventEmitter();
+  @Output("change") click = new EventEmitter();
 
   constructor() {}
 
@@ -16,6 +16,10 @@ export class FavoriteComponent implements OnInit {
 
   onClick() {
     this.isFavorite = !this.isFavorite;
-    this.change.emit();
+    this.click.emit({ newValue: this.isFavorite });
   }
+}
+
+export interface FavoriteChangedEventArgs {
+  newValue: boolean;
 }

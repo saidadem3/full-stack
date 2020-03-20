@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
-import { faFilm, faFire } from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: "favorite",

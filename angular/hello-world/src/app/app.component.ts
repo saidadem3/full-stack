@@ -7,9 +7,5 @@ import { FavoriteChangedEventArgs } from "./favorite/favorite.component";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  tweet = {
-    body: "Here is the body of the tweet...",
-    isLiked: true,
-    likesCount: 10
-  };
+  viewMode = "something else";
 }

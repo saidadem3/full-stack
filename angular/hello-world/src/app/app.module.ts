@@ -10,11 +10,11 @@ import { CourseService } from "./courses.service";
 import { AuthorsComponent } from "./authors/authors.component";
 import { AuthorsService } from "./authors.service";
 import { FavoriteComponent } from "./favorite/favorite.component";
-import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faFilm, faFire } from "@fortawesome/free-solid-svg-icons";
-import { PanelComponent } from './panel/panel.component';
-import { LikeComponent } from './like/like.component';
+import { PanelComponent } from "./panel/panel.component";
+import { LikeComponent } from "./like/like.component";
+import { InputFormatDirective } from './input-format.directive';
+import { ZippyComponent } from './zippy/zippy.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -24,14 +24,15 @@ import { LikeComponent } from './like/like.component';
     AuthorsComponent,
     FavoriteComponent,
     PanelComponent,
-    LikeComponent
+    LikeComponent,
+    InputFormatDirective,
+    ZippyComponent,
+    ContactFormComponent
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule, FontAwesomeModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [CourseService, AuthorsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor() {
-    library.add(faFilm, faFire);
-  }
+  constructor() {}
 }
